@@ -1,0 +1,10 @@
+services:
+  recept_reader:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+     - API_TOKEN=${API_TOKEN}
+     - PORT=${PORT}
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
