@@ -61,8 +61,8 @@ def extract_tables_from_file(file_path, output_path):
 
     all_data = {"tables": [], "text": []}
 
-    # Единая настройка Tesseract с psm=1 для всех типов файлов
-    tess_ocr = TesseractOCR(n_threads=1, lang="rus+eng", psm=1)
+    # Единая настройка Tesseract с psm=6 для всех типов файлов
+    tess_ocr = TesseractOCR(n_threads=1, lang="rus+eng", psm=6)
     print("Используется Tesseract с psm=1 для всех файлов")
 
     if file_extension == '.pdf':
